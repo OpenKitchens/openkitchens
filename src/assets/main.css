@@ -1,0 +1,52 @@
+@import './base.css';
+
+#app {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+.truthText{
+  color: #8b50ff;
+}
+
+h1{
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin: 10px;
+}
+
+p{
+  margin: 10px;
+}
+
+input{
+  border-radius: 7px;
+  background-color: #222;
+  border: solid 1px #333;
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px;
+}
+
+label{
+  display: block;
+}
+
+:focus {
+  outline: none;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
