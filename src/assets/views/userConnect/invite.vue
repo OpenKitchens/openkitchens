@@ -1,144 +1,238 @@
 <script setup lang="ts">
 import headerTitle from "@/assets/atomic/headerTitle.vue"
-import ButtonNomal from "@/assets/atomic/ButtonNomal.vue"
-import ButtonRed from "@/assets/atomic/ButtonRed.vue"
+import { ref, watch } from "vue"
+import Peer from "peerjs"
+import { useRoute } from "vue-router"
+import { useRouter } from "vue-router";
 
-import { useRoute } from "vue-router";
-import Peer from "peerjs";
-import { ref } from "vue";
+const route = useRoute()
+const router = useRouter()
 
-const route = useRoute();
+const username = ref("")
+const password = ref("")
+const hashData = ref("")
+const inviteCode = ref("")
+const descriptionText = ref("おや? まだアカウントを作成していませんか?")
+const showCopiedMessage = ref(false);
+const statusCard = ref(true)
 
-//urlのクエリからデータを取得し、背景の画像を取得する。
-const backgroundImage = ref("url("+route.query.backgroundImage+")")
-//urlのクエリからデータを取得し、ユーザーアイコンを取得する。
-const userIcon = ref(route.query.userIcon)
-//urlのクエリからデータを取得し、ユーザーネームを取得する。
-const userName = ref(route.query.userName)
+// hashDataを変更する関数
+const updateHashData = (newData: string) => {
+  hashData.value = newData
+}
 
-//urlのクエリからデータを取得して相手の接続IDを保持する。
+const login = async () => {
+  const result = await sha256(username.value + password.value)
+  updateHashData(result)
+  localStorage.setItem("myName", username.value)
+  localStorage.setItem("myHash", result)
+  statusCard.value = false
+  descriptionText.value = "ようこそOpenKitchenの世界へ"
+  inviteCode.value = "invite?id="+result+"&backgroundImage=https://ocl-steinberg-live.steinberg.net/_storage/asset/178442/storage/PNG_extra-large_5500px/178442-extra-large.png"
+}
+
+async function sha256(variable: string) {
+  const message = variable
+  const encoder = new TextEncoder()
+  const data = encoder.encode(message)
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data)
+  const hashArray = Array.from(new Uint8Array(hashBuffer))
+  const hashHex = hashArray.map((byte) => byte.toString(16).padStart(2, "0")).join("")
+  return hashHex
+}
+
+const backgroundImage = ref("url(" + route.query.backgroundImage + ")")
 const targetID = String(route.query.id)
 
-//peerの接続
-const peer = new Peer(targetID+"1");
+const peer = new Peer(targetID + "TARGET")
+console.log(targetID + "TARGET")
 
-//接続を開始
-peer.on('open', (peerId) => {
-  console.log('接続が確立しました');
+peer.on("open", (peerId) => {
+  console.log("接続が確立しました")
 
-  peer.on('connection', (connect) => {
-    console.log('相手に接続しました');
+  peer.on("connection", (connect) => {
+    console.log("相手に接続しました")
 
-    connect.on('data', (data) => {
-      console.log('Received data:', data);
-    });
-  });
+    connect.on("data", (data) => {
+      console.log("Received data:", data)
+    })
+  })
 
+  const connect = peer.connect(targetID)
 
-  const connect = peer.connect(targetID);
+  // hashDataの変更を監視する
+  watch(hashData, (newValue) => {
+    console.log("hashDataが変更されました:", newValue)
 
-  connect.on('open', () => {
-    console.log('相手に接続しました');
+    const sendData = {
+      username: username.value,
+      hash: newValue
+    }
+    // 相手に自分の作成したアカウントの接続用ID(hash)を教える
+    connect.send(JSON.stringify(sendData))
+  })
 
-    //相手に自分の作成したアカウントの接続用ID(hash)を教える
-    connect.send("wakuwaku");
-  });
+  connect.on("open", () => {
+    console.log("相手に接続しました")
+  })
 
-  connect.on('error', (error) => {
-    console.error('Error connecting to peer:', error);
-  });
-});
+  connect.on("error", (error) => {
+    console.error("Error connecting to peer:", error)
+  })
+})
 
-peer.on('error', (error) => {
-  console.error('PeerJSエラー:', error);
-});
+peer.on("error", (error) => {
+  console.error("PeerJSエラー:", error)
+})
 
+const copyToClipboard = () => {
+  const input = document.createElement("input");
+  input.value = inviteCode.value;
+  document.body.appendChild(input);
+  input.select();
+  document.execCommand("copy");
+  document.body.removeChild(input);
+  showCopiedMessage.value = true;
+  setTimeout(() => {
+    showCopiedMessage.value = false;
+  }, 2000);
+};
+
+function goToHome () {
+  router.push("/");
+}
 </script>
 
 <template>
-  <div class="background"></div>
-  <section>
-    <headerTitle />
-    <div class="content">
-      <div class="field">
-        <h1>招待されました!</h1>
-        <p>まだアカウントを作成していないようですね。アカウントを作成し<span class="truthText">Truth!</span>しましょう</p>
-        <div class="UI">
-          <label for="username">username</label>
-          <input name="username" type="text">
-          <label for="password">password</label>
-          <input name="password" type="password">
-          <div class="ScreenControl">
-            <ButtonRed>拒否</ButtonRed>
-            <ButtonNomal>Next!</ButtonNomal>
+  <div class="background">
+    <div style="background-color: #0000003f;">
+      <headerTitle />
+      <div class="login-container scheme-mode">
+        <div class="card fadeUp">
+          <div class="card-body">
+            <h1 class="card-title text-center">招待されました!</h1>
+            <p class="text-center">{{ descriptionText }}</p>
+            <div v-if="statusCard" class="box fadeIn">
+              <form @submit.prevent="login">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="ユーザー名を入力" aria-label="Recipient's username"
+                    aria-describedby="basic-addon2" v-model="username">
+                  <span class="input-group-text scheme-mode-disable" id="basic-addon2">@open</span>
+                </div>
+                <div class="mb-3">
+                  <input type="password" id="password" class="form-control" v-model="password" placeholder="パスワードを入力"
+                    required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">その先の向こうへ</button>
+              </form>
+            </div>
+            <div v-else class="box fadeIn">
+              <label for="inviteCodeInput" class="form-label">招待コード</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-describedby="button-addon2" v-model="inviteCode" id="inviteCodeInput">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                  @click="copyToClipboard">Clip!</button>
+              </div>
+              <button type="submit" class="btn btn-primary w-100" @click="goToHome">さぁ、始めよう</button>
+              <div v-if="showCopiedMessage" class="alert alert-success mt-2">
+                コピーしました
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>
-.background{
+.background {
   background-image: v-bind(backgroundImage);
   background-repeat: no-repeat;
-  background-position:center bottom;
-  background-size:cover;
-
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  filter: blur(4px);
-}
-section{
+  background-position: center bottom;
+  background-size: cover;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
 }
-headerTitle{
-  z-index: 1;
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-.content{
-  width: 50vw;
-  height: 80vh;
-  background-color: #111;
+
+.card {
+  max-width: 500px;
+  width: 100%;
+  border: none;
   border-radius: 10px;
-  border: solid 1px #333;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ebebeb;
 }
-.field{
-  position: relative;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50vw;
+
+.card-body {
+  padding: 50px 70px;
 }
-.UI{
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 25vw;
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
-label{
-  text-align: left;
-  color: #888;
-  margin-top: 30px;
-  margin-bottom: 5px;
+
+input {
+  background-color: #e4e4e4;
 }
-input{
-  width: inherit;
-  height: 40px;
+
+p {
+  margin-bottom: 4rem;
 }
-.ScreenControl{
-  margin: 30px 10px;
+
+.input-group-text {
+  background-color: #c9c9c9;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeUp{
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
 }
 </style>

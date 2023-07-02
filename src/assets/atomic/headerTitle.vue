@@ -1,12 +1,12 @@
 <template>
   <div>
-    <img src="public/icons/title.svg">
+    <img src="public/icons/title_apps.png">
   </div>
 </template>
 
 <style scoped>
 img{
   width: 200px;
-  padding: 10px 20px;
+  margin: 10px calc(50% - 100px);
 }
 </style>
