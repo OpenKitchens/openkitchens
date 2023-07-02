@@ -13,11 +13,6 @@ const router = createRouter({
       path: "/invite",
       name: "invite",
       component: () => import("../assets/views/userConnect/invite.vue")
-    },
-    {
-      path: "/host",
-      name: "host",
-      component: () => import("../assets/views/userConnect/host.vue")
     }
   ]
 })
