@@ -1,0 +1,42 @@
+.card {
+  background-color: #f0f0f0;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+.user-image{
+  border: solid 2px rgb(234, 231, 227) !important;
+}
+
+li {
+  background-color: #f0f0f0 !important;
+}
+
+.navbar-color {
+  background-color: rgb(234, 231, 227) !important;
+}
+
+.nav-item {
+  background-color: rgb(234, 231, 227) !important;
+}
+
+.bg-dark {
+  background-color: #212529 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    filter: invert(1) hue-rotate(180deg);
+  }
+  .emoji {
+    filter: invert(1) hue-rotate(180deg);
+  }
+  .bg-dark {
+    background-color: #fff!important;
+  }
+  .card-img-overlay{
+    color: #000;
+  }
+  .user-image{
+    border: solid 2px #000 !important;
+  }
+}

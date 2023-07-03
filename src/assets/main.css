@@ -23,10 +23,6 @@ h1{
   margin: 10px;
 }
 
-p{
-  margin: 10px;
-}
-
 input{
   border-radius: 7px;
   background-color: #222;
@@ -55,7 +51,11 @@ label{
   .scheme-mode{
     filter: invert(1) hue-rotate(180deg);
   }
-  .scheme-mode-disable{
-    filter: invert(0) hue-rotate(360deg);
+  img.scheme-mode {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .emoji.scheme-mode {
+    filter: invert(1) hue-rotate(180deg);
   }
 }

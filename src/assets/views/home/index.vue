@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import headerComponents from "@/assets/atomic/headerComponents.vue"
+import headerComponents from "@/assets/atomic/home/headerComponents.vue"
+import leftSideBarComponents from "@/assets/atomic/home/leftSideBarComponents.vue"
+import mainContentComponents from "@/assets/atomic/home/mainContentComponents.vue"
+import rightSideBarComponents from "@/assets/atomic/home/rightSideBarComponents.vue"
+
 import Peer from "peerjs";
 
 const myID = localStorage.getItem("myHash");
@@ -35,15 +39,64 @@ peer.on('error', (error) => {
 </script>
 
 <template>
-  <div class="scheme-mode box">
-    <headerComponents />
+  <div class="holy-grail">
+    <header>
+      <headerComponents />
+    </header>
+    <main class="holy-grail__main">
+      <!-- Left sidebar -->
+      <aside class="holy-grail__left" style="overflow-y: scroll;height: calc(100vh - 50px);">
+        <leftSideBarComponents />
+      </aside>
+
+      <!-- Main content -->
+      <article class="holy-grail__middle" style="width:55%;overflow-y: scroll;height: calc(100vh - 50px);">
+        <mainContentComponents />
+      </article>
+
+      <!-- Right sidebar -->
+      <nav class="holy-grail__right" style="overflow-y: scroll;height: calc(100vh - 50px);">
+        <rightSideBarComponents />
+        <rightSideBarComponents />
+        <rightSideBarComponents />
+      </nav>
+    </main>
+    <footer></footer>
   </div>
 </template>
 
 <style scoped>
-.box{
-  width: 100vw;
-  height: 100vh;
+.holy-grail {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
+}
+
+.holy-grail__main {
+  /* Take the remaining height */
+  flex-grow: 1;
+
+  /* Layout the left sidebar, main content and right sidebar */
+  display: flex;
+  flex-direction: row;
+}
+
+.holy-grail__left {
+  width: 25%;
+}
+
+.holy-grail__middle {
+  /* Take the remaining width */
+  flex-grow: 1;
+}
+
+.holy-grail__right {
+  width: 20%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .holy-grail{
+    filter: invert(1) hue-rotate(180deg);
+  }
 }
 </style>
