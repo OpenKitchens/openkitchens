@@ -5,38 +5,42 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">
-              <img src="public/icons/house.svg" class="icon">
+              <img src="public/icons/house.svg" class="icon" />
               <p class="d-none d-lg-block">ホーム</p>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <img src="public/icons/bookmark.svg" class="icon">
+              <img src="public/icons/bookmark.svg" class="icon" />
               <p class="d-none d-lg-block">ブックマーク</p>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <img src="public/icons/message.svg" class="icon">
+              <img src="public/icons/message.svg" class="icon" />
               <p class="d-none d-lg-block">メッセージ</p>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <img src="public/icons/notification.svg" class="icon">
+              <img src="public/icons/notification.svg" class="icon" />
               <p class="d-none d-lg-block">通知</p>
             </a>
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-dark" type="submit">Search</button>
+          <input
+            class="form-control me-2 d-none d-lg-block"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-dark" type="submit">POST</button>
         </form>
       </div>
     </div>
   </nav>
 </template>
-
 
 <style scoped>
 /*@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css");*/
@@ -45,6 +49,7 @@
   padding-top: 0rem;
   padding-bottom: 0rem;
   border-bottom: solid 1px #d4d4d4;
+  height: 50px;
 }
 
 .title {
@@ -66,13 +71,12 @@ a:hover {
   font-weight: 600;
 }
 
-.nav-link p{
+.nav-link p {
   margin: 5px;
 }
 
-.icon{
+.icon {
   display: block;
-  
 }
 
 .mb-2 {
