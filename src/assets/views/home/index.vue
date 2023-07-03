@@ -45,7 +45,7 @@ peer.on('error', (error) => {
     </header>
     <main class="holy-grail__main">
       <!-- Left sidebar -->
-      <aside class="holy-grail__left" style="overflow-y: scroll;height: calc(100vh - 50px);">
+      <aside class="holy-grail__left d-none d-lg-block" style="overflow-y: scroll;height: calc(100vh - 50px);">
         <leftSideBarComponents />
       </aside>
 
@@ -55,7 +55,7 @@ peer.on('error', (error) => {
       </article>
 
       <!-- Right sidebar -->
-      <nav class="holy-grail__right" style="overflow-y: scroll;height: calc(100vh - 50px);">
+      <nav class="holy-grail__right d-none d-lg-block" style="overflow-y: scroll;height: calc(100vh - 50px);">
         <rightSideBarComponents />
         <rightSideBarComponents />
         <rightSideBarComponents />
