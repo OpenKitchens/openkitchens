@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 defineProps<{
-  myName: String;
-  myHash: String;
-  myHeader: String;
-  myIcon: String;
-  myBio: String;
-  servers: Object[];
-  friends: Object[];
+  myName: string;
+  myHash: string;
+  myHeader: string;
+  myIcon: string;
+  myBio: string;
+  servers: { emoji: string; title: string; badge: string; }[];
+  friends: { title: string; image: string; }[];
 }>();
 </script>
 
