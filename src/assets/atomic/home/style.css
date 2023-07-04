@@ -1,9 +1,9 @@
 .card {
   background-color: #f0f0f0;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.user-image{
+.user-image {
   border: solid 2px rgb(234, 231, 227) !important;
 }
 
@@ -19,6 +19,12 @@ li {
   background-color: rgb(234, 231, 227) !important;
 }
 
+.list-group-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .bg-dark {
   background-color: #212529 !important;
 }
@@ -31,12 +37,12 @@ li {
     filter: invert(1) hue-rotate(180deg);
   }
   .bg-dark {
-    background-color: #fff!important;
+    background-color: #fff !important;
   }
-  .card-img-overlay{
+  .card-img-overlay {
     color: #000;
   }
-  .user-image{
+  .user-image {
     border: solid 2px #000 !important;
   }
 }
