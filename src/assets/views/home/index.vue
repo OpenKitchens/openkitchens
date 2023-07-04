@@ -51,8 +51,12 @@ const UI = reactive({
 });
 
 const timeLine = reactive({
-  topThread: {},
-  threadList: [],
+  topThread: {background: "", title: "", text-preview: "", user: "", server: ""},
+  threadList: [
+    {background: "", title: "", text-preview: "", user: "", server: ""},
+    {background: "", title: "", text-preview: "", user: "", server: ""},
+    {background: "", title: "", text-preview: "", user: "", server: ""}
+  ]
 });
 
 peer.on("open", (peerId) => {
