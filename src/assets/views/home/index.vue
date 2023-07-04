@@ -51,13 +51,56 @@ const UI = reactive({
 });
 
 const timeLine = reactive({
-  topThread: { background: "https://static.reuters.com/resources/r/?m=02&d=20230704&t=2&i=1637745003&r=LYNXMPEJ63024&w=1600", title: "米メタ、ツイッターのような対話アプリ「Threads」発表へ", preview: "[３日 ロイター] - 米メタ・プラットフォームズは対話アプリ「Threads（スレッズ）」の立ち上げを計画している。\n新アプリは同社の写真共有アプリ、インスタグラムのテキストベースの会話アプリで、６日に発表される予定。ユーザーはインスタグラムでフォローしているアカウントをそのまま引き継ぐことができ、ユーザー名も変わらない。\nツイッター運営会社はここ数日、閲覧数の制限や「TweetDeck（ツイートデック）」の認証制度導入など、さまざまな制限を発表している。\n", user: "9e61633c0c104a64d719e53871538f73688291d3ffd02dff5f55e3ae7de093d0", icon: "https://static.wikia.nocookie.net/discord/images/e/e6/Mee6.png", link: "9e61633c0c104a64d719e53871538f73688291d3ffd02dff5f55e3ae7de093d0/米メタ、ツイッターのような対話アプリ「Threads」発表へ"},
+  topThread: {
+    background:
+      "https://static.reuters.com/resources/r/?m=02&d=20230704&t=2&i=1637745003&r=LYNXMPEJ63024&w=1600",
+    title: "米メタ、ツイッターのような対話アプリ「Threads」発表へ",
+    preview:
+      "[３日 ロイター] - 米メタ・プラットフォームズは対話アプリ「Threads（スレッズ）」の立ち上げを計画している。\n新アプリは同社の写真共有アプリ、インスタグラムのテキストベースの会話アプリで、６日に発表される予定。ユーザーはインスタグラムでフォローしているアカウントをそのまま引き継ぐことができ、ユーザー名も変わらない。\nツイッター運営会社はここ数日、閲覧数の制限や「TweetDeck（ツイートデック）」の認証制度導入など、さまざまな制限を発表している。\n",
+    user: "9e61633c0c104a64d719e53871538f73688291d3ffd02dff5f55e3ae7de093d0",
+    icon: "https://static.wikia.nocookie.net/discord/images/e/e6/Mee6.png",
+    link: "9e61633c0c104a64d719e53871538f73688291d3ffd02dff5f55e3ae7de093d0/米メタ、ツイッターのような対話アプリ「Threads」発表へ",
+    serverEmoji: "🎙",
+    server: "雑談サーバー",
+  },
   threadList: [
-    {title: "【VRChat】自鯖のリンク貼ってけ", user: "52d16e3c0c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0", icon: "https://lh3.googleusercontent.com/a/AAcHTtfJxAxhupV-gaBkzvK52gbXss-IRzj8uk88IIg-aI5fYA=s96-c", serverEmoji: "🍔" ,server: "openkitchen開発部", link: "52d16e3c0c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0/【VRChat】自鯖のリンク貼ってけ", badge: 512},
-    {title: "あ、Github落ちた…", user: "12d6e63c0c10ea64d779e58871538f73978291d3ffd72dff5f75e3ae7de07370", icon: "https://static.wikia.nocookie.net/discord/images/e/e6/Mee6.png", serverEmoji: "🐈‍⬛", server: "GitHubの民", link: "12d6e63c0c10ea64d779e58871538f73978291d3ffd72dff5f75e3ae7de07370/あ、Github落ちた…", badge: 287},
-    {title: "【悲報】GitHubサーバーダウン...", user: "52d16e3c0c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0", icon: "https://neconeconews.com/wp-content/uploads/popcat1_close.png", serverEmoji: "🎙", server: "雑談サーバー", link: "52d16e3c0c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0/【悲報】GitHubサーバーダウン...", badge: 114},
-    {title: "【organization】ワクワク参加レポジトリ", user: "65a1e340c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0", icon: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png", serverEmoji: "🐈‍⬛", server: "GitHubの民", link: "65a1e340c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0/【organization】ワクワク参加レポジトリ", badge: 71}
-  ]
+    {
+      title: "【VRChat】自鯖のリンク貼ってけ",
+      user: "52d16e3c0c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0",
+      icon: "https://lh3.googleusercontent.com/a/AAcHTtfJxAxhupV-gaBkzvK52gbXss-IRzj8uk88IIg-aI5fYA=s96-c",
+      serverEmoji: "🍔",
+      server: "openkitchen開発部",
+      link: "52d16e3c0c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0/【VRChat】自鯖のリンク貼ってけ",
+      badge: 512,
+    },
+    {
+      title: "あ、Github落ちた…",
+      user: "12d6e63c0c10ea64d779e58871538f73978291d3ffd72dff5f75e3ae7de07370",
+      icon: "https://static.wikia.nocookie.net/discord/images/e/e6/Mee6.png",
+      serverEmoji: "🐈‍⬛",
+      server: "GitHubの民",
+      link: "12d6e63c0c10ea64d779e58871538f73978291d3ffd72dff5f75e3ae7de07370/あ、Github落ちた…",
+      badge: 287,
+    },
+    {
+      title: "【悲報】GitHubサーバーダウン...",
+      user: "52d16e3c0c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0",
+      icon: "https://neconeconews.com/wp-content/uploads/popcat1_close.png",
+      serverEmoji: "🎙",
+      server: "雑談サーバー",
+      link: "52d16e3c0c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0/【悲報】GitHubサーバーダウン...",
+      badge: 114,
+    },
+    {
+      title: "【organization】ワクワク参加レポジトリ",
+      user: "65a1e340c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png",
+      serverEmoji: "🐈‍⬛",
+      server: "GitHubの民",
+      link: "65a1e340c104a64d719e58871538f73988291d3ffd02dff5f55e3ae7de093d0/【organization】ワクワク参加レポジトリ",
+      badge: 71,
+    },
+  ],
 });
 
 peer.on("open", (peerId) => {
@@ -116,7 +159,7 @@ peer.on("error", (error) => {
         class="holy-grail__middle"
         style="width: 55%; overflow-y: scroll; height: calc(100vh - 50px)"
       >
-        <mainContentComponents 
+        <mainContentComponents
           :topThread="timeLine.topThread"
           :threadList="timeLine.threadList"
         />
@@ -170,5 +213,4 @@ peer.on("error", (error) => {
     filter: invert(1) hue-rotate(180deg);
   }
 }
-
 </style>
