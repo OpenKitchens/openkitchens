@@ -7,7 +7,10 @@ import { reactive } from "vue";
 import Peer from "peerjs";
 
 //初期データの格納
-localStorage.setItem("myBio", "Hi there");
+localStorage.setItem(
+  "myBio",
+  "Laravel(PHP)とGCPが好きなWebエンジニア。けど業務で使うのはJava/Kotlin系とReact。発言は個人の意見であり組織を代表しません。"
+);
 localStorage.setItem(
   "myIcon",
   "https://lh3.googleusercontent.com/a/AAcHTtfJxAxhupV-gaBkzvK52gbXss-IRzj8uk88IIg-aI5fYA=s96-c"
@@ -45,6 +48,11 @@ const UI = reactive({
   myBio: myBio,
   friends: friends,
   servers: servers,
+});
+
+const timeLine = reactive({
+  topThread: {},
+  threadList: [],
 });
 
 peer.on("open", (peerId) => {

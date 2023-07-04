@@ -57,7 +57,11 @@ defineProps<{
   height: 70px;
   position: absolute;
   border: solid 2px #ffffff;
-  bottom: 80px;
+  top: calc(12vw - 35px);
+}
+
+.card-img-top {
+  height: 12vw;
 }
 
 .thread-icon {
