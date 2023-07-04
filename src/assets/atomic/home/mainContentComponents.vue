@@ -22,7 +22,6 @@
         Proを体験してる現地勢のツイート見てちょっと凹んでいます。今のところ国内でVision
         Proを触れているのは一部のITジャーナリストやメディアの数人程度。ギズモード・ジャパンでも綱藤さんが触ってきました。
       </p>
-      <p class="card-text">Last updated 3 mins ago</p>
     </div>
   </div>
 

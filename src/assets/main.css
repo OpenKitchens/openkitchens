@@ -1,4 +1,4 @@
-@import './base.css';
+@import "./base.css";
 
 #app {
   margin: 0;
@@ -13,17 +13,17 @@ a,
   transition: 0.4s;
 }
 
-.truthText{
+.truthText {
   color: #8b50ff;
 }
 
-h1{
+h1 {
   font-weight: 700;
   font-size: 1.7rem;
   margin: 10px;
 }
 
-input{
+input {
   border-radius: 7px;
   background-color: #222;
   border: solid 1px #333;
@@ -33,7 +33,7 @@ input{
   padding: 15px;
 }
 
-label{
+label {
   display: block;
 }
 
@@ -48,7 +48,11 @@ label{
 }
 
 @media (prefers-color-scheme: dark) {
-  .scheme-mode{
+  #app {
+    background-color: #000;
+  }
+
+  .scheme-mode {
     filter: invert(1) hue-rotate(180deg);
   }
   img.scheme-mode {
