@@ -29,40 +29,73 @@
           </li>
         </ul>
         <div class="d-flex">
-          <input class="form-control me-2 d-none d-lg-block" type="search" placeholder="Search" aria-label="Search" />
-          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#threadPOST">POST</button>
+          <input
+            class="form-control me-2 d-none d-lg-block"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#threadPOST"
+          >
+            POST
+          </button>
         </div>
       </div>
     </div>
   </nav>
 
   <!--メッセージの作成-->
-<div class="modal fade" id="threadPOST" tabindex="-1" aria-labelledby="threadPOSTLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="threadPOSTLabel">スレッドを立てる</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+  <div
+    class="modal fade"
+    id="threadPOST"
+    tabindex="-1"
+    aria-labelledby="threadPOSTLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="threadPOSTLabel">スレッドを立てる</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label"
+                >Recipient:</label
+              >
+              <input type="text" class="form-control" id="recipient-name" />
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary darkButton">
+            Send message
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <style scoped>
@@ -139,6 +172,33 @@ a:hover {
 
   img {
     filter: invert(1) hue-rotate(180deg);
+  }
+
+  .modal-content {
+    background-color: rgb(24, 21, 17) !important;
+    border: solid 1px rgb(55, 55, 55) !important;
+    color: #fff;
+  }
+  .modal-header {
+    border-color: rgb(55, 55, 55) !important;
+  }
+  .modal-footer {
+    border-color: rgb(55, 55, 55) !important;
+  }
+  textarea {
+    background-color: rgb(34, 31, 27) !important;
+    border: solid 1px rgb(84, 81, 77) !important;
+    color: #fff !important;
+  }
+  .darkButton {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    color: #fff;
+  }
+  .btn-secondary {
+    background-color: #2e2e2e;
+    border-color: #333333;
+    color: #fff;
   }
 }
 </style>
