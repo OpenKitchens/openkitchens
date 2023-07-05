@@ -39,7 +39,7 @@ defineProps<{
   </div>
 
   <div class="card d-none d-lg-block" style="width: 100%; margin-top: 5px">
-    <img :src="topThread.background" class="card-img-top" alt="..." />
+    <img :src="topThread.background" class="card-img-top" />
     <div class="card-body">
       <h5 class="card-text">{{ topThread.title }}</h5>
       <p class="card-text">{{ topThread.preview }}</p>
@@ -57,7 +57,9 @@ defineProps<{
     >
       <img :src="thread.icon" class="rounded-circle thread-icon" />
       <div class="ms-2 me-auto">
-        <div class="fw-bold">{{ thread.title }}</div>
+        <div class="fw-bold threadBold">
+          {{ thread.title }}
+        </div>
         <span class="emoji">{{ thread.serverEmoji }}</span> {{ thread.server }}
       </div>
       <span class="badge bg-primary rounded-pill">{{ thread.badge }}</span>
@@ -78,6 +80,12 @@ defineProps<{
   margin-right: 10px;
 }
 
+.threadBold {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (max-width: 960px) {
   .card-img-overlay {
     position: absolute;
@@ -85,6 +93,9 @@ defineProps<{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70vw;
+  }
+  .threadBold {
+    width: calc(55vw - 20px);
   }
 }
 </style>

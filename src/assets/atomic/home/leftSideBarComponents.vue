@@ -5,8 +5,8 @@ defineProps<{
   myHeader: string;
   myIcon: string;
   myBio: string;
-  servers: { emoji: string; title: string; badge: string; }[];
-  friends: { title: string; image: string; }[];
+  servers: { emoji: string; title: string; badge: string }[];
+  friends: { title: string; image: string }[];
 }>();
 </script>
 
@@ -75,5 +75,11 @@ defineProps<{
 .other-icon {
   width: 35px;
   height: 35px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .holy-grail {
+    background-color: #000;
+  }
 }
 </style>

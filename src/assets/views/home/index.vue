@@ -210,7 +210,15 @@ peer.on("error", (error) => {
 
 @media (prefers-color-scheme: dark) {
   .holy-grail {
-    filter: invert(1) hue-rotate(180deg);
+    background-color: #000;
+  }
+}
+
+@media (max-width: 960px) {
+  .holy-grail__middle {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: calc(55% - 10px);
   }
 }
 </style>
