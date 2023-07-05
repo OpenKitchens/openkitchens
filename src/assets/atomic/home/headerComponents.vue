@@ -28,18 +28,41 @@
             </a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input
-            class="form-control me-2 d-none d-lg-block"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-dark" type="submit">POST</button>
-        </form>
+        <div class="d-flex">
+          <input class="form-control me-2 d-none d-lg-block" type="search" placeholder="Search" aria-label="Search" />
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#threadPOST">POST</button>
+        </div>
       </div>
     </div>
   </nav>
+
+  <!--メッセージの作成-->
+<div class="modal fade" id="threadPOST" tabindex="-1" aria-labelledby="threadPOSTLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="threadPOSTLabel">スレッドを立てる</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <style scoped>
@@ -88,26 +111,32 @@ a:hover {
     background-color: rgb(44, 41, 37) !important;
     border-bottom: solid 1px #444;
   }
+
   p {
     filter: invert(1) hue-rotate(180deg);
   }
+
   input {
-    background-color: rgb(54, 51, 47);
-    border: solid 1px rgb(64, 61, 57);
+    background-color: rgb(34, 31, 27);
+    border: solid 1px rgb(84, 81, 77);
     color: #fff !important;
   }
+
   input:focus {
     background-color: rgb(54, 51, 47);
     border: solid 1px rgb(64, 61, 57);
     color: #fff !important;
   }
+
   input::placeholder {
     color: #fff !important;
   }
+
   button {
     background-color: #fff;
     color: #000;
   }
+
   img {
     filter: invert(1) hue-rotate(180deg);
   }

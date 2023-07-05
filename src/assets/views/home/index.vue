@@ -6,6 +6,31 @@ import rightSideBarComponents from "@/assets/atomic/home/rightSideBarComponents.
 import { reactive } from "vue";
 import Peer from "peerjs";
 
+//初期データ
+const myName = localStorage.getItem("myName");
+const myIcon = localStorage.getItem("myIcon");
+const myHeader = localStorage.getItem("myHeader");
+const myBio = localStorage.getItem("myBio");
+const myID = localStorage.getItem("myHash");
+//@ts-ignore
+let friends = JSON.parse(localStorage.getItem("friends"));
+//@ts-ignore
+let servers = JSON.parse(localStorage.getItem("servers"));
+
+//UIの構成
+const UI = reactive({
+  //OpenDeckのホーム
+  myName: myName,
+  myHash: myID,
+  myIcon: myIcon,
+  myHeader: myHeader,
+  myBio: myBio,
+  friends: friends,
+  servers: servers,
+});
+
+const peer = new Peer(myID as string);
+
 //初期データの格納
 localStorage.setItem(
   "myBio",
@@ -27,28 +52,6 @@ localStorage.setItem(
   "friends",
   `[{"image": "https://lh3.googleusercontent.com/a/AAcHTtfJxAxhupV-gaBkzvK52gbXss-IRzj8uk88IIg-aI5fYA=s96-c","title": "OpenKitchens"},{"image": "https://www.nhk-character.com/wp/wp-content/uploads/2021/02/main_george.jpg","title": "おさるのジョージ"},{"image": "https://static.wikia.nocookie.net/discord/images/e/e6/Mee6.png","title": "Dirt君"}]`
 );
-
-const myName = localStorage.getItem("myName");
-const myIcon = localStorage.getItem("myIcon");
-const myHeader = localStorage.getItem("myHeader");
-const myBio = localStorage.getItem("myBio");
-const myID = localStorage.getItem("myHash");
-//@ts-ignore
-let friends = JSON.parse(localStorage.getItem("friends"));
-//@ts-ignore
-let servers = JSON.parse(localStorage.getItem("servers"));
-
-const peer = new Peer(myID as string);
-
-const UI = reactive({
-  myName: myName,
-  myHash: myID,
-  myIcon: myIcon,
-  myHeader: myHeader,
-  myBio: myBio,
-  friends: friends,
-  servers: servers,
-});
 
 const timeLine = reactive({
   topThread: {

@@ -7,6 +7,8 @@ defineProps<{
     icon: string;
     title: string;
     preview: string;
+    serverEmoji: string;
+    server: string;
   };
   threadList: {
     title: string;
@@ -21,17 +23,10 @@ defineProps<{
 </script>
 
 <template>
-  <div
-    class="card text-white bg-dark topCard d-lg-none"
-    style="margin-top: 5px; border: solid 1px #eee"
-  >
+  <div class="card text-white bg-dark topCard d-lg-none" style="margin-top: 5px; border: solid 1px #eee">
     <img :src="topThread.background" class="card-img" style="opacity: 0.5" />
     <div class="card-img-overlay mx-auto">
-      <img
-        :src="topThread.icon"
-        class="rounded-circle other-icon mx-auto d-block"
-        style="margin-bottom: 5px"
-      />
+      <img :src="topThread.icon" class="rounded-circle other-icon mx-auto d-block" style="margin-bottom: 5px" />
       <h4 class="card-title text-center">
         {{ topThread.title }}
       </h4>
@@ -51,10 +46,7 @@ defineProps<{
   </div>
 
   <ol class="list-group list-group" style="margin-top: 5px">
-    <li
-      class="list-group-item d-flex justify-content-between align-items-start"
-      v-for="thread in threadList"
-    >
+    <li class="list-group-item d-flex justify-content-between align-items-start" v-for="thread in threadList">
       <img :src="thread.icon" class="rounded-circle thread-icon" />
       <div class="ms-2 me-auto">
         <div class="fw-bold threadBold">
@@ -69,6 +61,7 @@ defineProps<{
 
 <style scoped>
 @import url("./style.css");
+
 .other-icon {
   width: 35px;
   height: 35px;
@@ -94,6 +87,7 @@ defineProps<{
     transform: translate(-50%, -50%);
     width: 70vw;
   }
+
   .threadBold {
     width: calc(55vw - 20px);
   }

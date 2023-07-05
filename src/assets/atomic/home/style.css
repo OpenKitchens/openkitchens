@@ -25,12 +25,32 @@ li {
   text-overflow: ellipsis;
 }
 
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 .bg-dark {
   background-color: #212529 !important;
 }
 
 @media (prefers-color-scheme: dark) {
   .card {
-    background-color: rgb(44, 41, 37) !important;
+    background-color: rgb(24, 21, 17) !important;
+    border: solid 1px rgb(55, 55, 55) !important;
+    color: #fff;
+  }
+  .user-image{
+    border: solid 2px rgb(33, 33, 33) !important;
+  }
+  .list-group-item{
+    background-color: rgb(24, 21, 17) !important;
+    border-color: rgb(55, 55, 55) !important;
+    color: #fff;
+  }
+  .card-header{
+    border-bottom: solid 1px rgb(55, 55, 55) !important;
   }
 }

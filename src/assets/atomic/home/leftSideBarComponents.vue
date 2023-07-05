@@ -24,11 +24,12 @@ defineProps<{
 
   <div class="card" style="width: calc(100% - 10px); margin: 5px">
     <div class="card-header">自分のサーバー</div>
-    <ul class="list-group list-group-flush" v-for="server in servers">
+    <ul class="list-group list-group-flush">
       <li
         class="list-group-item d-flex justify-content-between align-items-start"
+        v-for="server in servers"
       >
-        <div class="ms-2 me-auto">
+        <div class="ms-2 me-auto ellipsis">
           <span class="emoji">{{ server.emoji }}</span>
           {{ server.title }}
         </div>
@@ -39,10 +40,10 @@ defineProps<{
 
   <div class="card" style="width: calc(100% - 10px); margin: 5px">
     <div class="card-header">フレンド</div>
-    <ul class="list-group list-group-flush" v-for="friend in friends">
-      <li class="list-group-item">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" v-for="friend in friends">
         <img :src="friend.image" class="rounded-circle other-icon" />
-        {{ friend.title }}
+        <span class="ellipsis">{{ friend.title }}</span>
       </li>
     </ul>
   </div>
@@ -75,8 +76,6 @@ defineProps<{
 .other-icon {
   width: 35px;
   height: 35px;
-}
-
-@media (prefers-color-scheme: dark) {
+  margin-right: 10px;
 }
 </style>
