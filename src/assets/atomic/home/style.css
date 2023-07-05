@@ -31,7 +31,6 @@ li {
   text-overflow: ellipsis;
 }
 
-
 .bg-dark {
   background-color: #212529 !important;
 }
@@ -42,15 +41,15 @@ li {
     border: solid 1px rgb(55, 55, 55) !important;
     color: #fff;
   }
-  .user-image{
+  .user-image {
     border: solid 2px rgb(33, 33, 33) !important;
   }
-  .list-group-item{
+  .list-group-item {
     background-color: rgb(24, 21, 17) !important;
     border-color: rgb(55, 55, 55) !important;
     color: #fff;
   }
-  .card-header{
+  .card-header {
     border-bottom: solid 1px rgb(55, 55, 55) !important;
   }
 }
