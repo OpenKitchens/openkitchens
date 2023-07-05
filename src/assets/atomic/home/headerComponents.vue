@@ -89,12 +89,20 @@ a:hover {
     border-bottom: solid 1px #444;
   }
   p {
-    color: #fff;
+    filter: invert(1) hue-rotate(180deg);
   }
   input {
     background-color: rgb(54, 51, 47);
     border: solid 1px rgb(64, 61, 57);
-    color: #fff;
+    color: #fff !important;
+  }
+  input:focus {
+    background-color: rgb(54, 51, 47);
+    border: solid 1px rgb(64, 61, 57);
+    color: #fff !important;
+  }
+  input::placeholder {
+    color: #fff !important;
   }
   button {
     background-color: #fff;

@@ -78,8 +78,5 @@ defineProps<{
 }
 
 @media (prefers-color-scheme: dark) {
-  .holy-grail {
-    background-color: #000;
-  }
 }
 </style>
