@@ -30,19 +30,7 @@ li {
 }
 
 @media (prefers-color-scheme: dark) {
-  img {
-    filter: invert(1) hue-rotate(180deg);
-  }
-  .emoji {
-    filter: invert(1) hue-rotate(180deg);
-  }
-  .bg-dark {
-    background-color: #fff !important;
-  }
-  .card-img-overlay {
-    color: #000;
-  }
-  .user-image {
-    border: solid 2px #000 !important;
+  .card {
+    background-color: rgb(44, 41, 37) !important;
   }
 }

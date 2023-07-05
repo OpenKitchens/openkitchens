@@ -82,4 +82,34 @@ a:hover {
 .mb-2 {
   margin-bottom: 0rem !important;
 }
+
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: rgb(44, 41, 37) !important;
+    border-bottom: solid 1px #444;
+  }
+  p {
+    filter: invert(1) hue-rotate(180deg);
+  }
+  input {
+    background-color: rgb(54, 51, 47);
+    border: solid 1px rgb(64, 61, 57);
+    color: #fff !important;
+  }
+  input:focus {
+    background-color: rgb(54, 51, 47);
+    border: solid 1px rgb(64, 61, 57);
+    color: #fff !important;
+  }
+  input::placeholder {
+    color: #fff !important;
+  }
+  button {
+    background-color: #fff;
+    color: #000;
+  }
+  img {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
 </style>
