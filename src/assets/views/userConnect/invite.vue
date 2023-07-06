@@ -106,7 +106,6 @@ function goToHome () {
 <template>
   <div class="background">
     <div style="background-color: #0000003f;">
-      <headerTitle />
       <div class="login-container scheme-mode">
         <div class="card fadeUp">
           <div class="card-body">
