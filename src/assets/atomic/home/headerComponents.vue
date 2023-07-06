@@ -216,8 +216,8 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label .list-group-item {
-  background-color: #252b47 !important;
-  border-color: #3e4f99 !important;
+  background-color: #bcc8ff !important;
+  border-color: #7386dd !important;
 }
 
 .list-group-item {
@@ -298,6 +298,10 @@ input[type="radio"]:checked + label .list-group-item {
     background-color: rgb(44, 41, 37) !important;
     border: solid 1px rgb(54, 51, 47) !important;
     color: #fff;
+  }
+  input[type="radio"]:checked + label .list-group-item {
+    background-color: #252b47 !important;
+    border-color: #3e4f99 !important;
   }
 }
 </style>
