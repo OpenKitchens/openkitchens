@@ -1,3 +1,9 @@
+<script>
+function toggleButton(element) {
+  element.classList.toggle("active");
+}
+</script>
+
 <template>
   <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="container-fluid">
@@ -91,24 +97,51 @@
                 <option value="3">🎙 雑談サーバー</option>
               </select>
             </div>
-            <div class="mb-3">
-              <div>
-                <div style="display: flex">
-                  <input type="radio" id="pub" name="d" checked />
-                  <label for="pub">
-                    <img src="icons/public.svg" />
-                    <span>パブリックにスレッドを共有</span>
-                  </label>
-                </div>
-                <div style="display: flex">
-                  <input type="radio" id="private" name="d" />
-                  <label for="private">
-                    <img src="icons/private.svg" />
-                    <span>プライベートにスレッドを共有</span>
-                  </label>
-                </div>
+
+            <input type="radio" name="typeOpen" value="1" id="private" />
+            <label for="private" class="label">
+              <div class="mb-3">
+                <ol class="list-group list-group">
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-start clickable"
+                  >
+                    <img src="icons/private.svg" class="private" />
+                    <div class="ms-2 me-auto">
+                      <div
+                        class="form-check-label fw-bold"
+                        for="flexCheckDefault"
+                      >
+                        プライベート
+                      </div>
+                      <div>スレッドを立てるサーバー内でのみ閲覧できます。</div>
+                    </div>
+                  </li>
+                </ol>
               </div>
-            </div>
+            </label>
+
+            <input type="radio" name="typeOpen" value="2" id="public" />
+            <label for="public" class="label">
+              <div class="mb-3">
+                <ol class="list-group list-group">
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-start clickable"
+                  >
+                    <img src="icons/public.svg" class="private" />
+                    <div class="ms-2 me-auto">
+                      <div
+                        class="form-check-label fw-bold"
+                        for="flexCheckDefault"
+                      >
+                        パブリック
+                      </div>
+                      <div>スレッドがすべての世界ユーザーに共有されます。</div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </label>
+
             <div class="mb-3">
               <label for="message-text" class="col-form-label"
                 >メッセージ</label
@@ -172,6 +205,27 @@ a:hover {
 .mb-2 {
   margin-bottom: 0rem !important;
 }
+
+.private {
+  width: 35px;
+  margin: 5px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label .list-group-item {
+  background-color: #252b47 !important;
+  border-color: #3e4f99 !important;
+}
+
+.list-group-item {
+  width: 460px;
+  margin: 0 50%;
+  transform: translateX(-50%);
+}
+
 @media (prefers-color-scheme: dark) {
   .navbar {
     background-color: rgb(44, 41, 37) !important;
@@ -219,8 +273,14 @@ a:hover {
   .modal-footer {
     border-color: rgb(55, 55, 55) !important;
   }
-  textarea {
+  textarea,
+  .form-select {
     background-color: rgb(34, 31, 27) !important;
+    border: solid 1px rgb(84, 81, 77) !important;
+    color: #fff !important;
+  }
+  .input-group-text {
+    background-color: rgb(74, 71, 67) !important;
     border: solid 1px rgb(84, 81, 77) !important;
     color: #fff !important;
   }
@@ -232,6 +292,11 @@ a:hover {
   .btn-secondary {
     background-color: #2e2e2e;
     border-color: #333333;
+    color: #fff;
+  }
+  .list-group-item {
+    background-color: rgb(44, 41, 37) !important;
+    border: solid 1px rgb(54, 51, 47) !important;
     color: #fff;
   }
 }
