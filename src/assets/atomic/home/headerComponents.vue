@@ -59,7 +59,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="threadPOSTLabel">スレッドを立てる</h5>
+          <h5 class="modal-title" id="threadPOSTLabel">スレッドを投稿</h5>
           <button
             type="button"
             class="btn-close"
@@ -70,13 +70,49 @@
         <div class="modal-body">
           <form>
             <div class="mb-3">
-              <label for="recipient-name" class="col-form-label"
-                >Recipient:</label
-              >
+              <label for="recipient-name" class="col-form-label">Title</label>
               <input type="text" class="form-control" id="recipient-name" />
             </div>
             <div class="mb-3">
-              <label for="message-text" class="col-form-label">Message:</label>
+              <label for="recipient-name" class="col-form-label"
+                >ヘッダー画像</label
+              >
+              <input type="text" class="form-control" id="recipient-name" />
+            </div>
+
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupSelect01">
+                Server
+              </label>
+              <select class="form-select" id="inputGroupSelect01">
+                <option selected>自分のサーバーを選択</option>
+                <option value="1">🍔 openkitchen開発部</option>
+                <option value="2">🐈‍⬛ GitHubの民</option>
+                <option value="3">🎙 雑談サーバー</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <div>
+                <div style="display: flex">
+                  <input type="radio" id="pub" name="d" checked />
+                  <label for="pub">
+                    <img src="icons/public.svg" />
+                    <span>パブリックにスレッドを共有</span>
+                  </label>
+                </div>
+                <div style="display: flex">
+                  <input type="radio" id="private" name="d" />
+                  <label for="private">
+                    <img src="icons/private.svg" />
+                    <span>プライベートにスレッドを共有</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label"
+                >メッセージ</label
+              >
               <textarea class="form-control" id="message-text"></textarea>
             </div>
           </form>
@@ -87,11 +123,9 @@
             class="btn btn-secondary"
             data-bs-dismiss="modal"
           >
-            Close
+            閉じる
           </button>
-          <button type="button" class="btn btn-primary darkButton">
-            Send message
-          </button>
+          <button type="button" class="btn btn-primary darkButton">投稿</button>
         </div>
       </div>
     </div>
@@ -138,7 +172,6 @@ a:hover {
 .mb-2 {
   margin-bottom: 0rem !important;
 }
-
 @media (prefers-color-scheme: dark) {
   .navbar {
     background-color: rgb(44, 41, 37) !important;
@@ -175,12 +208,13 @@ a:hover {
   }
 
   .modal-content {
-    background-color: rgb(24, 21, 17) !important;
+    background-color: rgb(34, 31, 27) !important;
     border: solid 1px rgb(55, 55, 55) !important;
     color: #fff;
   }
   .modal-header {
-    border-color: rgb(55, 55, 55) !important;
+    background-color: rgb(54, 51, 47) !important;
+    border-color: rgb(54, 51, 47) !important;
   }
   .modal-footer {
     border-color: rgb(55, 55, 55) !important;
