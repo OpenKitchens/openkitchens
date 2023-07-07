@@ -98,7 +98,13 @@ function toggleButton(element) {
               </select>
             </div>
 
-            <input type="radio" name="typeOpen" value="1" id="private" />
+            <input
+              type="radio"
+              name="typeOpen"
+              value="1"
+              id="private"
+              checked
+            />
             <label for="private" class="label">
               <div class="mb-3">
                 <ol class="list-group list-group">
@@ -113,7 +119,9 @@ function toggleButton(element) {
                       >
                         プライベート
                       </div>
-                      <div>スレッドを立てるサーバー内でのみ閲覧できます。</div>
+                      <div>
+                        スレッドを立てる対象サーバー内でのみ閲覧できます。
+                      </div>
                     </div>
                   </li>
                 </ol>
@@ -135,7 +143,9 @@ function toggleButton(element) {
                       >
                         パブリック
                       </div>
-                      <div>スレッドがすべての世界ユーザーに共有されます。</div>
+                      <div>
+                        スレッドがすべての世界対象ユーザーに共有されます。
+                      </div>
                     </div>
                   </li>
                 </ol>
@@ -216,14 +226,8 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label .list-group-item {
-  background-color: #bcc8ff !important;
+  background-color: #cce5ff !important;
   border-color: #7386dd !important;
-}
-
-.list-group-item {
-  width: 460px;
-  margin: 0 50%;
-  transform: translateX(-50%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -267,7 +271,7 @@ input[type="radio"]:checked + label .list-group-item {
     color: #fff;
   }
   .modal-header {
-    background-color: rgb(54, 51, 47) !important;
+    background-color: rgb(34, 41, 27) !important;
     border-color: rgb(54, 51, 47) !important;
   }
   .modal-footer {
