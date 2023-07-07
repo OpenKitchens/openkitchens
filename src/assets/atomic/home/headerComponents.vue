@@ -230,6 +230,10 @@ input[type="radio"]:checked + label .list-group-item {
   border-color: #7386dd !important;
 }
 
+.modal-header button {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   .navbar {
     background-color: rgb(44, 41, 37) !important;
@@ -271,8 +275,11 @@ input[type="radio"]:checked + label .list-group-item {
     color: #fff;
   }
   .modal-header {
-    background-color: rgb(34, 41, 27) !important;
+    background-color: rgb(34, 31, 27) !important;
     border-color: rgb(54, 51, 47) !important;
+  }
+  .modal-header button {
+    display: none;
   }
   .modal-footer {
     border-color: rgb(55, 55, 55) !important;
