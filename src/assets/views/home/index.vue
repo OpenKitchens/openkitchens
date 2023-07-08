@@ -138,7 +138,11 @@ peer.on("error", (error) => {
 <template>
   <div class="holy-grail">
     <header>
-      <headerComponents />
+      <headerComponents
+        :myName="(UI.myName as string)"
+        :myHash="(UI.myHash as string)"
+        :myIcon="(UI.myIcon as string)"
+      />
     </header>
     <main class="holy-grail__main">
       <!-- Left sidebar -->

@@ -1,7 +1,9 @@
-<script>
-function toggleButton(element) {
-  element.classList.toggle("active");
-}
+<script setup lang="ts">
+defineProps<{
+  myName: string;
+  myIcon: string;
+  myHash: string;
+}>();
 </script>
 
 <template>
@@ -35,19 +37,33 @@ function toggleButton(element) {
           </li>
         </ul>
         <div class="d-flex">
-          <input
-            class="form-control me-2 d-none d-lg-block"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn rounded-circle p-0 quickUI"
+              data-bs-toggle="modal"
+              data-bs-target="#anonymous"
+              style="width: 2rem; height: 2rem"
+            >
+              <img src="icons/private.svg" />
+            </button>
+            <button
+              type="button"
+              class="btn rounded-circle p-0 quickUI"
+              data-bs-toggle="modal"
+              data-bs-target="#settings"
+              style="width: 2rem; height: 2rem"
+            >
+              <img src="icons/settings.svg" />
+            </button>
+          </div>
           <button
             type="button"
             class="btn btn-dark"
             data-bs-toggle="modal"
             data-bs-target="#threadPOST"
           >
-            POST
+            スレッド投稿
           </button>
         </div>
       </div>
@@ -111,7 +127,7 @@ function toggleButton(element) {
                   <li
                     class="list-group-item d-flex justify-content-between align-items-start clickable"
                   >
-                    <img src="icons/private.svg" class="private" />
+                    <img src="icons/private.svg" class="threadSettings" />
                     <div class="ms-2 me-auto">
                       <div
                         class="form-check-label fw-bold"
@@ -135,7 +151,7 @@ function toggleButton(element) {
                   <li
                     class="list-group-item d-flex justify-content-between align-items-start clickable"
                   >
-                    <img src="icons/public.svg" class="private" />
+                    <img src="icons/public.svg" class="threadSettings" />
                     <div class="ms-2 me-auto">
                       <div
                         class="form-check-label fw-bold"
@@ -169,6 +185,102 @@ function toggleButton(element) {
             閉じる
           </button>
           <button type="button" class="btn btn-primary darkButton">投稿</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal fade"
+    id="anonymous"
+    tabindex="-1"
+    aria-labelledby="anonymousLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="anonymousLabel">
+            アカウントを匿名化する
+          </h1>
+        </div>
+        <div class="modal-body">
+          アカウントを匿名化して「誰が言ったか」に縛られる世界から逃亡しよう。<br />
+          アイデンティティを隠し、「何を言ったか」で客観的に評価し合う<br />
+          <br />
+
+          <div class="mb-3">
+            Preview
+            <ol class="list-group list-group">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start clickable"
+              >
+                <img :src="myIcon" class="user-icon" />
+                <div class="ms-2 me-auto">
+                  <div class="form-check-label fw-bold" for="flexCheckDefault">
+                    {{ myName }}
+                  </div>
+                  <div>No anonymous</div>
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start clickable"
+              >
+                <img src="icons/private.svg" class="private user-icon" />
+                <div class="ms-2 me-auto">
+                  <div class="form-check-label fw-bold" for="flexCheckDefault">
+                    匿名アカウント
+                  </div>
+                  <div>anonymous</div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            閉じる
+          </button>
+          <button type="button" class="btn btn-primary darkButton">
+            無効化
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal fade"
+    id="settings"
+    tabindex="-1"
+    aria-labelledby="settingsLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="settingsLabel">Modal title</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">...</div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
@@ -216,11 +328,6 @@ a:hover {
   margin-bottom: 0rem !important;
 }
 
-.private {
-  width: 35px;
-  margin: 5px;
-}
-
 input[type="radio"] {
   display: none;
 }
@@ -234,6 +341,37 @@ input[type="radio"]:checked + label .list-group-item {
   display: none;
 }
 
+.btn-dark {
+  border-radius: 70px;
+}
+
+.quickUI {
+  background-color: rgb(185, 178, 167);
+  width: 38px !important;
+  height: 38px !important;
+  margin-right: 10px;
+}
+
+.quickUI img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.threadSettings {
+  width: 35px;
+  margin: 5px;
+}
+
+.private {
+  padding: 5px;
+  border: solid 1px #555;
+}
+.user-icon {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
 @media (prefers-color-scheme: dark) {
   .navbar {
     background-color: rgb(44, 41, 37) !important;
@@ -265,8 +403,25 @@ input[type="radio"]:checked + label .list-group-item {
     color: #000;
   }
 
+  .quickUI {
+    background-color: rgb(84, 81, 77);
+  }
+
   img {
     filter: invert(1) hue-rotate(180deg);
+  }
+
+  .user-icon {
+    filter: invert(0) hue-rotate(0deg);
+  }
+
+  .private {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .antiImg {
+    filter: invert(0) hue-rotate(0deg);
+    border-radius: 50%;
   }
 
   .modal-content {
