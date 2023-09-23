@@ -1,0 +1,28 @@
+#app {
+  margin: 0;
+  width: 100vw;
+  background-color: #fffefb;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #app{
+    color: rgb(243, 245, 247);
+    background-color: rgb(16, 16, 16);
+  }
+  .icon{
+    filter: invert(100%);
+  }
+}
