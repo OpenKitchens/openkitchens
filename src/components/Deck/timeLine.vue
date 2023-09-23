@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="card-body pt-0">
-      <h4 class="card-title mt-0 mb-3 fw-bold">OpenKitchen ネクストシーズン</h4>
+      <h4 class="card-title mt-0 mb-3 fw-bold">OpenKitchen NextSeason</h4>
       トップユーザーによるOpen会議開始<br>
       議会で決められた法案は一般ユーザーの投票結果によって実装が決定されるぞ<br>
       議会の内容はスレッドでリアルタイム更新されるからぜひリアクションボタンで反応してくれよな<br>
