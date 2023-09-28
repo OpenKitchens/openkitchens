@@ -1,37 +1,57 @@
 <template>
   <div class="card mt-3">
-    <div class="card-body">
-      <img src="/assets/moyasi.png" class="w-100 rounded">
+    <h5 class="card-header fw-bold pt-3 pb-3">貢献レート</h5>
+    <div class="d-flex">
+      <img src="https://lh3.googleusercontent.com/a/ACg8ocLNxUa91eJmBHgyjw4Ud-3EvNHnHcXAc9dsz1kgo8OY0g=s576-c-no"
+        class="avatar-icon rounded-pill">
+      <div class="avatar-name ms-0">
+        <h6 class="fw-bold mb-0">Openkitchen</h6>
+        <small class="rate">2000XP</small>
+      </div>
     </div>
     <div class="d-flex">
       <img src="https://lh3.googleusercontent.com/a/ACg8ocLNxUa91eJmBHgyjw4Ud-3EvNHnHcXAc9dsz1kgo8OY0g=s576-c-no"
         class="avatar-icon rounded-pill">
       <div class="avatar-name ms-0">
         <h6 class="fw-bold mb-0">Openkitchen</h6>
-        <small class="time">2023,9,18</small>
+        <small class="rate">2000XP</small>
       </div>
     </div>
-    <div class="card-body pt-0">
-      <h4 class="card-title mt-0 mb-3 fw-bold">OpenKitchen NextSeason</h4>
-      トップユーザーによるOpen議会Start<br>
+    <div class="d-flex">
+      <img src="https://lh3.googleusercontent.com/a/ACg8ocLNxUa91eJmBHgyjw4Ud-3EvNHnHcXAc9dsz1kgo8OY0g=s576-c-no"
+        class="avatar-icon rounded-pill">
+      <div class="avatar-name ms-0">
+        <h6 class="fw-bold mb-0">Openkitchen</h6>
+        <small class="rate">2000XP</small>
+      </div>
     </div>
-    <div class="card-body pt-0">
-      <button type="button" class="btn btn-light rounded-pill add-emoji border ms-2 ">😀</button>
-      <button type="button" class="btn btn-light rounded-pill emoji border ms-2">❤️<span>2</span></button>
+    <div class="d-flex">
+      <img src="https://lh3.googleusercontent.com/a/ACg8ocLNxUa91eJmBHgyjw4Ud-3EvNHnHcXAc9dsz1kgo8OY0g=s576-c-no"
+        class="avatar-icon rounded-pill">
+      <div class="avatar-name ms-0">
+        <h6 class="fw-bold mb-0">Openkitchen</h6>
+        <small class="rate">2000XP</small>
+      </div>
     </div>
   </div>
 </template>
+
+
 <style scoped>
 @media (prefers-color-scheme: dark) {
-  .card {
+
+  .card,
+  .card-header{
     background-color: rgb(24, 24, 24) !important;
     color: rgb(243, 245, 247);
     border-color: rgba(243, 245, 247, 0.05) !important;
   }
+
   .add-emoji {
     background-color: rgb(24, 24, 24) !important;
     border-color: rgba(243, 245, 247, 0.2) !important;
   }
+
   .emoji {
     background-color: rgb(24, 24, 24) !important;
     border-color: rgba(243, 245, 247, 0.2) !important;
@@ -47,10 +67,18 @@
   border-radius: 15px;
 }
 
+.card-header {
+  border-radius: 15px 15px 0 0;
+  background-color: #fffefb;
+  border-color: rgba(0, 0, 0, 0.07);
+}
+
 .avatar-icon {
   width: 45px;
   height: 45px;
   margin: 15px;
+  /*box-sizing: content-box;*/
+  animation: expansion 1s infinite alternate;
 }
 
 .avatar-name {
@@ -75,7 +103,7 @@
   padding: 4px;
 }
 
-.time{
+.rate{
   color: #717171;
 }
 </style>
