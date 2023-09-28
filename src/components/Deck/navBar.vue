@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold mx-4" href="#">Atlantis</a>
+      <a class="navbar-brand fw-bold mx-4" href="#">Atlantis屋台</a>
       <div class="navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item">
