@@ -46,7 +46,7 @@ import navBar from "@/components/Deck/navBar.vue"
       </div>
     </div>
     <div class="sm-none col-md-5 mt-4">
-      <h5 class="fw-bold">TimeLine</h5>
+      <h5 class="fw-bold mt-1">TimeLine</h5>
 
       <timeLine />
       <timeLine />

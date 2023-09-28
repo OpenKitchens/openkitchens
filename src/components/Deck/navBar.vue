@@ -18,6 +18,8 @@
           </li>
         </ul>
       </div>
+      <img src="https://lh3.googleusercontent.com/a/ACg8ocLNxUa91eJmBHgyjw4Ud-3EvNHnHcXAc9dsz1kgo8OY0g=s576-c-no"
+        alt="Bootstrap" class="avatar-icon rounded-pill mx-4">
     </div>
   </nav>
 </template>
@@ -27,14 +29,22 @@
     background-color: #252525ff !important;
     border-color: #3d3d3d !important;
   }
-  .nav-link{
+
+  .nav-link {
     color: #d4d4d4;
   }
-  .active{
+
+  .active {
     color: #fff !important;
   }
-  .navbar-brand{
+
+  .navbar-brand {
     color: #fff !important;
   }
+}
+
+.avatar-icon {
+  width: 45px;
+  height: 45px;
 }
 </style>
