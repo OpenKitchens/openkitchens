@@ -1,20 +1,20 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold mx-4" href="#">@tlantis</a>
+      <a class="navbar-brand fw-bold mx-4" href="#">Atlantis</a>
       <div class="navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">festival</a>
+            <a class="nav-link" href="#">Festival</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Season</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">node</a>
+            <a class="nav-link" href="#">Node</a>
           </li>
         </ul>
       </div>
