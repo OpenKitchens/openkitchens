@@ -5,7 +5,7 @@ import navBar from "@/components/Deck/navBar.vue"
 
 <template>
   <navBar class="float w-100 border-bottom" style="top:0;left:0" />
-  <section class="pt-5 pb-0 position-relative"
+  <section class="mt-5 pt-5 pb-0 position-relative"
     style="background-image: url(assets/event.png); background-repeat: no-repeat; background-size: cover; background-position: bottom center;">
     <div class="bg-overlay bg-dark opacity-8"></div>
     <div class="container">
