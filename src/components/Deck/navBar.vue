@@ -1,20 +1,23 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold mx-4" href="#">Atlantis屋台</a>
+      <a class="navbar-brand fw-bold mx-4" href="/">Atlantis屋台</a>
       <div class="navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <router-link to="/" class="nav-link">Home</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Festival</a>
+            <router-link to="/event" class="nav-link">Festival</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Season</a>
+            <router-link to="/season" class="nav-link">Season</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Node</a>
+            <router-link to="/node" class="nav-link">Node</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/implant" class="nav-link">Implant</router-link>
           </li>
         </ul>
       </div>

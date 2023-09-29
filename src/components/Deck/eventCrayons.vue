@@ -1,18 +1,18 @@
 <template>
-  <div class="card mt-3">
-    <h5 class="card-header fw-bold pt-3 pb-3">注目のお祭り</h5>
+  <div class="card mt-3 card-border">
+    <h5 class="card-header fw-bold pt-3 pb-3">参加中のイベント</h5>
     <div class="d-flex">
       <img src="/assets/season.png" class="event-icon rounded-pill">
       <div class="event-name ms-0 p-2">
-        <h5 class="fw-bold mb-0">@tlantis 秋祭り</h5>
+        <h5 class="fw-bold mb-0">Atlantis 秋祭り</h5>
         <span class="badge bg-success">開催中!</span>
       </div>
     </div>
     <div class="d-flex">
       <img src="/assets/openRate.png" class="event-icon rounded-pill">
       <div class="event-name ms-0 p-2">
-        <h5 class="fw-bold mb-0">@tlantis サーバーバトル</h5>
-        <span class="badge bg-success">開催中!</span>
+        <h5 class="fw-bold mb-0">Atlantis サーバーバトル</h5>
+        <span class="badge bg-warning">準備中!</span>
       </div>
     </div>
   </div>

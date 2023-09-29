@@ -1,5 +1,5 @@
 <template>
-  <div class="card mt-3">
+  <div class="card mt-3 card-border">
     <div class="card-body">
       <img src="/assets/moyasi.png" class="w-100 rounded">
     </div>
@@ -23,28 +23,14 @@
 </template>
 <style scoped>
 @media (prefers-color-scheme: dark) {
-  .card {
-    background-color: rgb(24, 24, 24) !important;
-    color: rgb(243, 245, 247);
-    border-color: rgba(243, 245, 247, 0.05) !important;
-  }
-  .add-emoji {
-    background-color: rgb(24, 24, 24) !important;
-    border-color: rgba(243, 245, 247, 0.2) !important;
-  }
   .emoji {
     background-color: rgb(24, 24, 24) !important;
     border-color: rgba(243, 245, 247, 0.2) !important;
-    color: rgb(243, 245, 247);
+    color: rgb(243, 245, 247) !important;
   }
-}
-
-.card {
-  /*box-shadow: rgba(140, 149, 159, 0.15) 0px 3px 6px 0px;*/
-  background-color: #fffefb;
-  /*border-color: rgb(216, 222, 228);*/
-  border-color: rgba(0, 0, 0, 0.07);
-  border-radius: 15px;
+  .add-emoji{
+    border-color: rgba(243, 245, 247, 0.2) !important;
+  }
 }
 
 .avatar-icon {
