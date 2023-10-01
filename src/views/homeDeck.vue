@@ -14,6 +14,7 @@ import userProfil from "@/components/Deck/userProfil.vue"
         <userProfil />
       </div>
     </div>
+    
     <div class="sm-none col-md-6 mt-4">
       <h5 class="fw-bold mt-2">TimeLine</h5>
 
