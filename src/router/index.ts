@@ -31,6 +31,16 @@ const router = createRouter({
       component: () => import('../views/eventDeck.vue')
     },
     {
+      path: '/season',
+      name: 'season',
+      component: () => import('../views/seasonDeck.vue')
+    },
+    {
+      path: '/season',
+      name: 'season',
+      component: () => import('../views/nodeDeck.vue')
+    },
+    {
       path: '/profil',
       name: 'profil',
       component: () => import('../views/profilDeck.vue')

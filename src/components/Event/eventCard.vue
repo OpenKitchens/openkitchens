@@ -7,12 +7,12 @@
         <p class="mb-0">📢 Atlantis公式</p>
         <p class="mb-0 small mt-3">2個の拡張インプラント</p>
         <div class="card mt-2">
-          <div class="card-body p-2">
+          <div class="card-body p-2 list-card">
             Atlantisバトルテーマ
           </div>
         </div>
         <div class="card mt-2">
-          <div class="card-body p-2">
+          <div class="card-body p-2 list-card">
             Atlantisステッカー
           </div>
         </div>
