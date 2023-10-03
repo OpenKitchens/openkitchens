@@ -45,7 +45,7 @@ import navBar from "@/components/Deck/navBar.vue"
             </h7>
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><span class="code">issue/atlantis/public/myThread</span> <img
-                  src="icon/download.svg" class="pb-1 px-2 plugin-img">Finderで開く
+                  src="/icon/download.svg" class="pb-1 px-2 plugin-img">Finderで開く
                 <span class="badge rounded-pill text-bg-purple badge-right">Express 4</span>
               </li>
               <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span> <img src="/icon/download.svg"
