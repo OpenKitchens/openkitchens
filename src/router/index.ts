@@ -36,8 +36,8 @@ const router = createRouter({
       component: () => import('../views/seasonDeck.vue')
     },
     {
-      path: '/season',
-      name: 'season',
+      path: '/node',
+      name: 'node',
       component: () => import('../views/nodeDeck.vue')
     },
     {
