@@ -31,12 +31,12 @@ import navBar from "@/components/Deck/navBar.vue"
           <p class="mb-4 small mt-3">6個の拡張インプラント - 200EMP</p>
 
           <div class="card pt-3 px-2 scroll">
-            <p><img src="icon/plugin.svg" class="pb-1 px-2 plugin-img">シーズンテーマ</p>
-            <p><img src="icon/plugin.svg" class="pb-1 px-2 plugin-img">イベントチケット</p>
-            <p><img src="icon/plugin.svg" class="pb-1 px-2 plugin-img">記憶のカケラ 1</p>
-            <p><img src="icon/plugin.svg" class="pb-1 px-2 plugin-img">記憶のカケラ 2</p>
-            <p><img src="icon/plugin.svg" class="pb-1 px-2 plugin-img">システムパッチソフトウエア</p>
-            <p><img src="icon/plugin.svg" class="pb-1 px-2 plugin-img">ブラックウォールチケット</p>
+            <p><img src="/icon/plugin.svg" class="pb-1 px-2 plugin-img">シーズンテーマ</p>
+            <p><img src="/icon/plugin.svg" class="pb-1 px-2 plugin-img">イベントチケット</p>
+            <p><img src="/icon/plugin.svg" class="pb-1 px-2 plugin-img">記憶のカケラ 1</p>
+            <p><img src="/icon/plugin.svg" class="pb-1 px-2 plugin-img">記憶のカケラ 2</p>
+            <p><img src="/icon/plugin.svg" class="pb-1 px-2 plugin-img">システムパッチソフトウエア</p>
+            <p><img src="/icon/plugin.svg" class="pb-1 px-2 plugin-img">ブラックウォールチケット</p>
           </div>
           <button class="btn btn-primary w-100 mt-3">All install</button>
 
