@@ -48,15 +48,15 @@ import navBar from "@/components/Deck/navBar.vue"
                   src="icon/download.svg" class="pb-1 px-2 plugin-img">Finderで開く
                 <span class="badge rounded-pill text-bg-purple badge-right">Express 4</span>
               </li>
-              <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span> <img src="icon/download.svg"
+              <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span> <img src="/icon/download.svg"
                   class="pb-1 px-2 plugin-img">Finderで開く
                 <span class="badge rounded-pill text-bg-purple badge-right">Express 7</span>
               </li>
-              <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span> <img src="icon/download.svg"
+              <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span> <img src="/icon/download.svg"
                   class="pb-1 px-2 plugin-img">Finderで開く
                 <span class="badge rounded-pill text-bg-purple badge-right">Express 12</span>
               </li>
-              <li class="list-group-item"><span class="code">auth/atlantis/server</span> <img src="icon/download.svg"
+              <li class="list-group-item"><span class="code">auth/atlantis/server</span> <img src="/icon/download.svg"
                   class="pb-1 px-2 plugin-img">Finderで開く
                 <span class="badge rounded-pill text-bg-purple badge-right">Express 6</span>
               </li>
