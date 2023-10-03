@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="width: 100vw!important;">
     <div class="container-fluid">
       <a class="navbar-brand fw-bold mx-4" href="/">Atlantis屋台</a>
       <div class="navbar-collapse">
