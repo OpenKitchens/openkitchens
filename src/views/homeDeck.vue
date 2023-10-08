@@ -8,16 +8,14 @@ import userProfil from "@/components/Deck/userProfil.vue"
 
 <template>
   <navBar class="float w-100 border-bottom" style="top:0;left:0" />
-  <div class="row m-0 mt-5">
-    <div class="col-md-3">
-      <div class="float col-md-3 h-100 mt-3">
+  <div class="row m-0 mt-5 mx-w-1080 mx-auto">
+    <div class="col-md-3 mt-4 px-0">
+      <div>
         <userProfil />
       </div>
     </div>
     
     <div class="col-md-6 mt-4">
-      <h5 class="fw-bold mt-2">TimeLine</h5>
-
       <timeLine />
       <timeLine />
       <timeLine />
@@ -25,8 +23,8 @@ import userProfil from "@/components/Deck/userProfil.vue"
 
       <div class="mb-5"></div>
     </div>
-    <div class="col-md-3 mt-5" style="padding-left: 0;">
-      <div class="mx-auto float w-25 m-2 h-100" style="padding-right: 10px;">
+    <div class="col-md-3 mt-4">
+      <div>
         <eventCrayons />
         <openRate />
       </div>
@@ -53,5 +51,9 @@ ul {
 
 .h-100 {
   height: calc(100vh - 62px) !important;
+}
+
+.mx-w-1080{
+  max-width: 1340px;
 }
 </style>

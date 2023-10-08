@@ -6,107 +6,106 @@ import navBar from "@/components/Deck/navBar.vue"
 <template>
   <navBar class="float w-100 border-bottom" style="top:0;left:0" />
 
-  <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-      <div class="container mt-5 p-5">
-        <div class="container pt-5">
-          <h4 class="fw-bold">コウケン値 Express</h4>
-          <div class="row px-3">
-            <div class="card col-md-8 p-0" style="border-radius: 5px 0 0 5px;">
-              <div class="card-body">
-                <contribution />
-              </div>
+  <div class="row mx-w-1080 mx-auto">
+    <div class="mt-5 p-5">
+      <div class="container pt-5">
+        <h4 class="fw-bold">コウケン値 Express</h4>
+        <div class="row px-3">
+          <div class="card col-12 col-xl-8 p-0 border-change">
+            <div class="card-body">
+              <contribution />
             </div>
-            <div class="card col-md-4" style="border-radius: 0 5px 5px 0;border-left: none;">
-              <div class="card-body">
-                <div class="d-flex">
-                  <img
-                    src="https://lh3.googleusercontent.com/a/ACg8ocLNxUa91eJmBHgyjw4Ud-3EvNHnHcXAc9dsz1kgo8OY0g=s576-c-no"
-                    class="avatar-icon rounded-pill">
-                  <div class="avatar-name ms-0">
-                    <h6 class="fw-bold mb-0">Openkitchen</h6>
-                    <small class="rate">2000XP</small>
-                  </div>
+          </div>
+          <div class="card col-md-4 d-none d-xl-block" style="border-radius: 0 5px 5px 0;border-left: none;">
+            <div class="card-body">
+              <div class="d-flex">
+                <img
+                  src="https://lh3.googleusercontent.com/a/ACg8ocLNxUa91eJmBHgyjw4Ud-3EvNHnHcXAc9dsz1kgo8OY0g=s576-c-no"
+                  class="avatar-icon rounded-pill">
+                <div class="avatar-name ms-0">
+                  <h6 class="fw-bold mb-0">Openkitchen</h6>
+                  <small class="rate">2000XP</small>
                 </div>
-                <span class="code">issue/@openkitchen</span>
               </div>
+              <span class="code">issue/@openkitchen</span>
             </div>
           </div>
         </div>
       </div>
-
-      <section class="bg-mode p-5">
-        <div class="container">
-          <h4 class="fw-bold">自分のノード</h4>
-          <div class="card text-center mt-3">
-            <h7 class="card-header fw-bold">
-              Your node
-            </h7>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><span class="code">issue/atlantis/public/myThread</span> <img
-                  src="/icon/download.svg" class="pb-1 px-2 plugin-img">Finderで開く
-                <span class="badge rounded-pill text-bg-purple badge-right">Express 4</span>
-              </li>
-              <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span> <img src="/icon/download.svg"
-                  class="pb-1 px-2 plugin-img">Finderで開く
-                <span class="badge rounded-pill text-bg-purple badge-right">Express 7</span>
-              </li>
-              <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span> <img src="/icon/download.svg"
-                  class="pb-1 px-2 plugin-img">Finderで開く
-                <span class="badge rounded-pill text-bg-purple badge-right">Express 12</span>
-              </li>
-              <li class="list-group-item"><span class="code">auth/atlantis/server</span> <img src="/icon/download.svg"
-                  class="pb-1 px-2 plugin-img">Finderで開く
-                <span class="badge rounded-pill text-bg-purple badge-right">Express 6</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-mode p-5">
-        <div class="container">
-          <h4 class="fw-bold">接続しているノード </h4>
-          <div class="card text-center mt-3">
-            <h7 class="card-header fw-bold">
-              connected node
-            </h7>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><span class="code">issue/atlantis/server</span></li>
-              <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span></li>
-              <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-mode p-5">
-        <div class="container">
-          <h4 class="fw-bold">参加しているサーバー </h4>
-          <div class="card text-center mt-3">
-            <h7 class="card-header fw-bold">
-              connected server
-            </h7>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">atlantis<span class="code badge-right server-code">auth/server:atlantis</span></li>
-              <li class="list-group-item">マイクラサーバー<span class="code badge-right server-code">auth/server:maikurasa-ba-</span></li>
-              <li class="list-group-item">ボードゲームatlantis<span class="code badge-right server-code">auth/server:bo-doge-muatlantis</span></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="mt-5">
-        <footer class="footer">
-          <div class="container">
-            <h4 class="card-subtitle mb-2 mt-2 fw-bold" style="color: #7f7f7f;">Atlantis屋台</h4>
-            <h6 class="card-subtitle mb-2 mt-2" style="color: #7f7f7f;">Atlantis屋台 - moyasiの❤️によって作られました</h6>
-          </div>
-        </footer>
-      </section>
     </div>
-    <div class="col-md-2"></div>
+
+    <section class="bg-mode p-5">
+      <div class="container">
+        <h4 class="fw-bold">自分のノード</h4>
+        <div class="card text-center mt-3">
+          <h7 class="card-header fw-bold">
+            Your node
+          </h7>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="code">issue/atlantis/public/myThread</span> <img
+                src="/icon/download.svg" class="pb-1 px-2 plugin-img">Finderで開く
+              <span class="badge rounded-pill text-bg-purple badge-right">Express 4</span>
+            </li>
+            <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span> <img src="/icon/download.svg"
+                class="pb-1 px-2 plugin-img">Finderで開く
+              <span class="badge rounded-pill text-bg-purple badge-right">Express 7</span>
+            </li>
+            <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span> <img src="/icon/download.svg"
+                class="pb-1 px-2 plugin-img">Finderで開く
+              <span class="badge rounded-pill text-bg-purple badge-right">Express 12</span>
+            </li>
+            <li class="list-group-item"><span class="code">auth/atlantis/server</span> <img src="/icon/download.svg"
+                class="pb-1 px-2 plugin-img">Finderで開く
+              <span class="badge rounded-pill text-bg-purple badge-right">Express 6</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-mode p-5">
+      <div class="container">
+        <h4 class="fw-bold">接続しているノード </h4>
+        <div class="card text-center mt-3">
+          <h7 class="card-header fw-bold">
+            connected node
+          </h7>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="code">issue/atlantis/server</span></li>
+            <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span></li>
+            <li class="list-group-item"><span class="code">auth/@moyasi/emp-record</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-mode p-5">
+      <div class="container">
+        <h4 class="fw-bold">参加しているサーバー </h4>
+        <div class="card text-center mt-3">
+          <h7 class="card-header fw-bold">
+            connected server
+          </h7>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">atlantis<span class="code badge-right server-code">auth/server:atlantis</span>
+            </li>
+            <li class="list-group-item">マイクラサーバー<span
+                class="code badge-right server-code">auth/server:maikurasa-ba-</span></li>
+            <li class="list-group-item">ボードゲームatlantis<span
+                class="code badge-right server-code">auth/server:bo-doge-muatlantis</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5">
+      <footer class="footer">
+        <div class="container">
+          <h4 class="card-subtitle mb-2 mt-2 fw-bold" style="color: #7f7f7f;">Atlantis屋台</h4>
+          <h6 class="card-subtitle mb-2 mt-2" style="color: #7f7f7f;">Atlantis屋台 - moyasiの❤️によって作られました</h6>
+        </div>
+      </footer>
+    </section>
   </div>
 </template>
 
@@ -164,7 +163,7 @@ import navBar from "@/components/Deck/navBar.vue"
   right: 10px;
 }
 
-.server-code{
+.server-code {
   top: 5px;
 }
 
@@ -193,9 +192,19 @@ import navBar from "@/components/Deck/navBar.vue"
   margin: 15px;
 }
 
+@media screen and (min-width: 1200px) {
+  .border-change {
+    border-radius: 5px 0 0 5px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .plugin-img {
     filter: invert(100%);
   }
+}
+
+.mx-w-1080{
+  max-width: 840px;
 }
 </style>
