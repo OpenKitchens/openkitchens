@@ -24,7 +24,7 @@ import navBar from "@/components/Deck/navBar.vue"
   <section class="mt-5 pt-3 row">
     <div class="col-md-1"></div>
     <div class="col-md-3">
-      <div class="card card-border w-auto m-1 mb-3 mb-sm-0">
+      <div class="card card-border w-auto m-1 mb-3 mx-3 mx-md-0">
         <div class="card-body">
           <h4 class="card-title fw-bold">Implant</h4>
           <h6 class="card-subtitle mb-4 mt-2" style="color: #7f7f7f;">インストールが推奨されるインプラント</h6>
@@ -44,7 +44,7 @@ import navBar from "@/components/Deck/navBar.vue"
       </div>
     </div>
     <div class="col-md-7">
-      <div class="card card-border w-auto m-1">
+      <div class="card card-border w-auto m-1 mx-3 mx-md-0">
         <div class="card-body">
           <h4 class="card-title fw-bold">Genius</h4>
           <h6 class="card-subtitle mb-2 mt-2" style="color: #7f7f7f;">アトランティスウォール会議に参加可能な5人のランナー</h6>

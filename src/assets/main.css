@@ -3,6 +3,7 @@
   width: 100vw;
   height: 100%;
   background-color: #fffefb;
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +19,12 @@
 
 @media (prefers-color-scheme: dark) {
   .card {
+    background-color: rgb(24, 24, 24) !important;
+    color: rgb(243, 245, 247) !important;
+    border-color: rgba(243, 245, 247, 0.05) !important;
+  }
+
+  .list-group-item, .list-group ,.list-group-flush{
     background-color: rgb(24, 24, 24) !important;
     color: rgb(243, 245, 247) !important;
     border-color: rgba(243, 245, 247, 0.05) !important;
@@ -40,6 +47,11 @@
   border-radius: 15px !important;
 }
 
-.scroll{
+.scroll {
   overflow-y: scroll;
+}
+
+#aahub {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
 }

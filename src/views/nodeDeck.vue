@@ -23,11 +23,11 @@ import navBar from "@/components/Deck/navBar.vue"
                   src="https://lh3.googleusercontent.com/a/ACg8ocLNxUa91eJmBHgyjw4Ud-3EvNHnHcXAc9dsz1kgo8OY0g=s576-c-no"
                   class="avatar-icon rounded-pill">
                 <div class="avatar-name ms-0">
-                  <h6 class="fw-bold mb-0">Openkitchen</h6>
+                  <h6 class="fw-bold mb-0" style="white-space: pre-wrap">Openkitchen</h6>
                   <small class="rate">2000XP</small>
                 </div>
               </div>
-              <span class="code">issue/@openkitchen</span>
+              <span class="code mx-3">issue/@openkitchen</span>
             </div>
           </div>
         </div>

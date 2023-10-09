@@ -1,25 +1,27 @@
 <template>
-  <div class="card mt-3 card-border">
-    <div class="card-body">
-      <img src="/assets/moyasi.png" class="w-100 rounded">
-    </div>
-    <div class="d-flex">
-      <img src="https://lh3.googleusercontent.com/a/ACg8ocLNxUa91eJmBHgyjw4Ud-3EvNHnHcXAc9dsz1kgo8OY0g=s576-c-no"
-        class="avatar-icon rounded-pill">
-      <div class="avatar-name ms-0">
-        <h6 class="fw-bold mb-0">Openkitchen</h6>
-        <small class="time">2023,9,18</small>
+  <router-link to="/thread" class="nav-link">
+    <div class="card mt-3 card-border">
+      <div class="card-body">
+        <img src="/assets/moyasi.png" class="w-100 rounded">
+      </div>
+      <div class="d-flex">
+        <img src="https://lh3.googleusercontent.com/a/ACg8ocLNxUa91eJmBHgyjw4Ud-3EvNHnHcXAc9dsz1kgo8OY0g=s576-c-no"
+          class="avatar-icon rounded-pill">
+        <div class="avatar-name ms-0">
+          <h6 class="fw-bold mb-0">Openkitchen</h6>
+          <small class="time">2023,9,18</small>
+        </div>
+      </div>
+      <div class="card-body pt-0">
+        <h4 class="card-title mt-0 mb-3 fw-bold">OpenKitchen NextSeason</h4>
+        トップユーザーによるOpen議会Start<br>
+      </div>
+      <div class="card-body pt-0">
+        <button type="button" class="btn btn-light rounded-pill add-emoji border ms-2 ">😀</button>
+        <button type="button" class="btn btn-light rounded-pill emoji border ms-2">❤️<span>2</span></button>
       </div>
     </div>
-    <div class="card-body pt-0">
-      <h4 class="card-title mt-0 mb-3 fw-bold">OpenKitchen NextSeason</h4>
-      トップユーザーによるOpen議会Start<br>
-    </div>
-    <div class="card-body pt-0">
-      <button type="button" class="btn btn-light rounded-pill add-emoji border ms-2 ">😀</button>
-      <button type="button" class="btn btn-light rounded-pill emoji border ms-2">❤️<span>2</span></button>
-    </div>
-  </div>
+  </router-link>
 </template>
 <style scoped>
 @media (prefers-color-scheme: dark) {
@@ -28,7 +30,8 @@
     border-color: rgba(243, 245, 247, 0.2) !important;
     color: rgb(243, 245, 247) !important;
   }
-  .add-emoji{
+
+  .add-emoji {
     border-color: rgba(243, 245, 247, 0.2) !important;
   }
 }
@@ -61,7 +64,7 @@
   padding: 4px;
 }
 
-.time{
+.time {
   color: #717171;
 }
 </style>

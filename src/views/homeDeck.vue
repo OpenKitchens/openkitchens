@@ -23,7 +23,7 @@ import userProfil from "@/components/Deck/userProfil.vue"
 
       <div class="mb-5"></div>
     </div>
-    <div class="col-md-3 mt-4">
+    <div class="col-md-3 mt-4 px-md-0">
       <div>
         <eventCrayons />
         <openRate />

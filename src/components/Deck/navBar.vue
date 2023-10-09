@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary" style="width: 100vw!important;">
-    <div class="container-fluid">
+    <div class="container-fluid mx-w-1080">
       <a class="navbar-brand fw-bold mx-4" href="/">Atlantis屋台</a>
-      <div class="navbar-collapse">
+      <div class="navbar-collapse d-none d-lg-block">
         <ul class="navbar-nav">
           <li class="nav-item">
             <router-link to="/" class="nav-link">Home</router-link>
@@ -49,5 +49,9 @@
 .avatar-icon {
   width: 45px;
   height: 45px;
+}
+
+.mx-w-1080{
+  max-width: 1340px;
 }
 </style>
