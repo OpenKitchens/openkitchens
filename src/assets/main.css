@@ -24,7 +24,9 @@
     border-color: rgba(243, 245, 247, 0.05) !important;
   }
 
-  .list-group-item, .list-group ,.list-group-flush{
+  .list-group-item,
+  .list-group,
+  .list-group-flush {
     background-color: rgb(24, 24, 24) !important;
     color: rgb(243, 245, 247) !important;
     border-color: rgba(243, 245, 247, 0.05) !important;
@@ -54,4 +56,12 @@
 #aahub {
   white-space: pre-wrap !important;
   word-wrap: break-word !important;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.text-shadow-title{
+  text-shadow: 1px 0 20px rgba(255, 255, 255, 0.46);
 }

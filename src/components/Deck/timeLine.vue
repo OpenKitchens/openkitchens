@@ -18,7 +18,7 @@
       </div>
       <div class="card-body pt-0">
         <button type="button" class="btn btn-light rounded-pill add-emoji border ms-2 ">😀</button>
-        <button type="button" class="btn btn-light rounded-pill emoji border ms-2">❤️<span>2</span></button>
+        <button type="button" class="btn btn-light rounded-pill emoji border ms-2 text-shadow">❤️<span>2</span></button>
       </div>
     </div>
   </router-link>
